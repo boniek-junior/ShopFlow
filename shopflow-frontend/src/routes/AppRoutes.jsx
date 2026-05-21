@@ -14,7 +14,7 @@ import OrdersPage from '../pages/OrdersPage';
 import OrderDetailPage from '../pages/OrderDetailPage';
 import ProfilePage from '../pages/ProfilePage';
 
-// Componente que protege rotas privadas — redireciona para login se nao autenticado
+// Componente que protege rotas privadas — redireciona para login se não autenticado
 const PrivateRoute = ({ children }) => {
   const { isAuthenticated, loading } = useAuth();
 
