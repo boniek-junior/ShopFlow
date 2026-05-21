@@ -3,8 +3,10 @@ import api from './api';
 // Serviço de produtos — listagem e busca
 
 // Retorna todos os produtos ativos
-export const getProducts = async () => {
-  const response = await api.get('/products/');
+export const getProducts = async (page = 1, limit = 10) => {
+  const response = await api.get('/products/', {
+    params: { page, page_size: limit },
+  });
   return response.data;
 };
 
